@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: github-issue-resolver-mcp-dev
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - node_modules:/app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - PORT=3000
+      - LOG_LEVEL=debug
+      - DEVELOPMENT_PATH=/app/workspace
+    command: >
+      bash -c "npm run dev"
+    networks:
+      - mcp-network
+
+  # Mock GitHub API for testing
+  mock-github:
+    image: node:18-alpine
+    container_name: mock-github-api
+    working_dir: /app
+    volumes:
+      - ./tests/mock-server:/app
+    ports:
+      - "3001:3001"
+    command: >
+      sh -c "npm install -g json-server && json-server --watch github-mock-data.json --port 3001 --routes routes.json --middlewares github-middleware.js"
+    networks:
+      - mcp-network
+
+volumes:
+  node_modules:
+
+networks:
+  mcp-network:
+    driver: bridge

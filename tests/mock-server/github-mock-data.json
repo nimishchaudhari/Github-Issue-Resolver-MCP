@@ -1,0 +1,132 @@
+{
+  "repos": [
+    {
+      "id": 1,
+      "owner": "testuser",
+      "repo": "testrepo",
+      "name": "testrepo",
+      "full_name": "testuser/testrepo",
+      "language": "TypeScript",
+      "default_branch": "main",
+      "has_issues": true
+    }
+  ],
+  "issues": [
+    {
+      "id": 1,
+      "number": 123,
+      "title": "Fix login bug",
+      "body": "The login form doesn't work with special characters in the username field.",
+      "state": "open",
+      "owner": "testuser",
+      "repo": "testrepo",
+      "labels": [
+        {
+          "id": 1,
+          "name": "bug",
+          "color": "d73a4a"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "number": 124,
+      "title": "Add dark mode",
+      "body": "We should add a dark mode option to the UI.",
+      "state": "open",
+      "owner": "testuser",
+      "repo": "testrepo",
+      "labels": [
+        {
+          "id": 2,
+          "name": "enhancement",
+          "color": "a2eeef"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "issue_number": 123,
+      "owner": "testuser",
+      "repo": "testrepo",
+      "body": "I can reproduce this bug with usernames containing @ and # symbols.",
+      "html_url": "https://github.com/testuser/testrepo/issues/123#issuecomment-1"
+    }
+  ],
+  "contents": [
+    {
+      "path": "",
+      "type": "dir",
+      "name": "",
+      "entries": [
+        {
+          "name": "src",
+          "type": "dir",
+          "path": "src"
+        },
+        {
+          "name": "tests",
+          "type": "dir",
+          "path": "tests"
+        },
+        {
+          "name": "package.json",
+          "type": "file",
+          "path": "package.json",
+          "content": "eyJuYW1lIjoidGVzdHJlcG8iLCJ2ZXJzaW9uIjoiMS4wLjAiLCJkZXBlbmRlbmNpZXMiOnsicmVhY3QiOiJeMTguMi4wIiwicmVhY3QtZG9tIjoiXjE4LjIuMCJ9LCJkZXZEZXBlbmRlbmNpZXMiOnsidHlwZXNjcmlwdCI6Il40LjkuNSIsImpzZG9tIjoiXjIxLjEuMSIsImplc3QiOiJeMjkuNi4zIn19"
+        },
+        {
+          "name": "README.md",
+          "type": "file",
+          "path": "README.md",
+          "content": "IyBUZXN0IFJlcG8KClRoaXMgaXMgYSB0ZXN0IHJlcG9zaXRvcnkuCg=="
+        }
+      ]
+    },
+    {
+      "path": "src",
+      "type": "dir",
+      "name": "src",
+      "entries": [
+        {
+          "name": "login.ts",
+          "type": "file",
+          "path": "src/login.ts",
+          "content": "ZXhwb3J0IGNvbnN0IGxvZ2luID0gKHVzZXJuYW1lOiBzdHJpbmcsIHBhc3N3b3JkOiBzdHJpbmcpID0+IHsKICBjb25zdCB2YWxpZFVzZXJuYW1lID0gdXNlcm5hbWUucmVwbGFjZSgvW15hLXpBLVowLTldL2csICcnKTsgLy8gQnVnOiBSZW1vdmVzIHNwZWNpYWwgY2hhcmFjdGVycwogIGNvbnNvbGUubG9nKGBMb2dnaW5nIGluICR7dmFsaWRVc2VybmFtZX1gKTsKICAvLyBMb2dpbiBsb2dpYyBoZXJlCiAgcmV0dXJuIHsgc3VjY2VzczogdHJ1ZSwgdXNlcm5hbWU6IHZhbGlkVXNlcm5hbWUgfTsKfQo="
+        },
+        {
+          "name": "index.ts",
+          "type": "file",
+          "path": "src/index.ts",
+          "content": "aW1wb3J0IHsgbG9naW4gfSBmcm9tICcuL2xvZ2luJzsKCmNvbnNvbGUubG9nKCdBcHBsaWNhdGlvbiBzdGFydGVkJyk7Cg=="
+        }
+      ]
+    },
+    {
+      "path": "tests",
+      "type": "dir",
+      "name": "tests",
+      "entries": [
+        {
+          "name": "login.test.ts",
+          "type": "file",
+          "path": "tests/login.test.ts",
+          "content": "aW1wb3J0IHsgbG9naW4gfSBmcm9tICcuLi9zcmMvbG9naW4nOwoKZGVzY3JpYmUoJ2xvZ2luJywgKCkgPT4gewogIGl0KCdzaG91bGQgbG9naW4gd2l0aCB2YWxpZCBjcmVkZW50aWFscycsICgpID0+IHsKICAgIGNvbnN0IHJlc3VsdCA9IGxvZ2luKCd0ZXN0dXNlcicsICdwYXNzd29yZCcpOwogICAgZXhwZWN0KHJlc3VsdC5zdWNjZXNzKS50b0JlKHRydWUpOwogICAgZXhwZWN0KHJlc3VsdC51c2VybmFtZSkudG9CZSgndGVzdHVzZXInKTsKICB9KTsKfSk7Cg=="
+        }
+      ]
+    }
+  ],
+  "pullRequests": [],
+  "branches": [
+    {
+      "name": "main",
+      "commit": {
+        "sha": "123abc",
+        "url": "https://api.github.com/repos/testuser/testrepo/commits/123abc"
+      },
+      "protected": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "/repos/:owner/:repo": "/repos?owner=:owner&repo=:repo",
+  "/repos/:owner/:repo/issues/:issue_number": "/issues?owner=:owner&repo=:repo&number=:issue_number",
+  "/repos/:owner/:repo/issues/:issue_number/comments": "/comments?owner=:owner&repo=:repo&issue_number=:issue_number",
+  "/repos/:owner/:repo/contents/:path": "/contents?path=:path",
+  "/repos/:owner/:repo/pulls": "/pullRequests",
+  "/repos/:owner/:repo/branches": "/branches"
+}

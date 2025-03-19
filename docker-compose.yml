@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: github-issue-resolver-mcp
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - PORT=3000
+      - LOG_LEVEL=debug
+      - DEVELOPMENT_PATH=/app/workspace
+    command: >
+      bash -c "npm run dev"
